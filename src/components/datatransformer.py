@@ -83,10 +83,7 @@ class DataTransformation:
 
             input_train_feature_arr = preprocessor.fit_transform(input_train_feature).toarray()
             input_test_feature_arr = preprocessor.transform(input_test_feature).toarray()
-            #print("_________________")
-            #print(input_train_feature_arr.shape)
-            #print(np.array(target_train_feature).shape)
-            #print("_________________")
+            
             target_train_feature = target_train_feature.to_numpy().reshape(-1, 1)
             target_test_feature = target_test_feature.to_numpy().reshape(-1, 1)
 
@@ -98,7 +95,6 @@ class DataTransformation:
                 file_path = self.data_tranformer_config.preprocessor_obj_file_path,
                 obj = preprocessor
             )
-            print("XXXXXXXX")
             return (
                 train_arr,
                 test_arr,
