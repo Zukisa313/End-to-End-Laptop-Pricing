@@ -141,7 +141,7 @@ pip install -r requirements.txt
 
 ## How to Run
 
-Run the pipeline from the root directory:
+Run the pipeline from the root directory (optional, retrain):
 
 ```bash
 python -m src.components.dataingestion
@@ -153,6 +153,20 @@ This will:
 * Transform features
 * Train models
 * Save the best model
+
+Run the flask app 
+
+```bash
+python app.py
+
+```
+
+Open in browser 
+
+```bash
+http://127.0.0.1:5000/
+
+```
 
 ---
 
@@ -169,6 +183,7 @@ This will:
 * NumPy
 * Pandas
 * Scikit-learn
+* Flask
 * Dill (for model serialization)
 
 ---
@@ -180,18 +195,9 @@ This will:
 * Debugging real-world ML issues (e.g., sparse matrices, model fitting errors)
 * Hyperparameter tuning and model selection
 * Writing production-ready code with logging and exception handling
+* Deploying ML models via Flask
 
 ---
-
-##  Future Improvements
-
-* Add Flask/FastAPI deployment
-* Integrate with a frontend UI
-* Deploy to cloud (AWS / Azure)
-
----
-
-
 
 ## 📬 Contact
 
